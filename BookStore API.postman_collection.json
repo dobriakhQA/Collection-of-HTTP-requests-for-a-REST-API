@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "e34a2083-94f3-49af-bda9-ff56c10a5d86",
+		"name": "BookStore API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27059287"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "GET Books API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://bookstore.toolsqa.com/BookStore/v1/Books",
+							"protocol": "https",
+							"host": [
+								"bookstore",
+								"toolsqa",
+								"com"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Books"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "folder for GET requests"
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "Add Books",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"f2a2fbd4-d733-447b-a3c4-27814006b3b3\",\r\n  \"collectionOfIsbns\": [\r\n    {\r\n      \"isbn\": \"9781449325862\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookstore.toolsqa.com/BookStore/v1/Books",
+							"protocol": "https",
+							"host": [
+								"bookstore",
+								"toolsqa",
+								"com"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Books",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"userId\": \"c888204b-0e89-42ec-a42f-0fdffd932917\",\r\n  \"collectionOfIsbns\": [\r\n    {\r\n      \"isbn\": \"9781449331818\"\r\n    }\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://bookstore.toolsqa.com/BookStore/v1/Books",
+									"protocol": "https",
+									"host": [
+										"bookstore",
+										"toolsqa",
+										"com"
+									],
+									"path": [
+										"BookStore",
+										"v1",
+										"Books"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.17.10 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 30 Apr 2023 08:42:08 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30-V67npMN18Zy3bnk1xW2xtLGgx8c\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"1200\",\n    \"message\": \"User not authorized!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"TestUser20_23\",\r\n  \"password\": \"TestPassword@20_23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://bookstore.toolsqa.com/Account/v1/User",
+							"protocol": "https",
+							"host": [
+								"bookstore",
+								"toolsqa",
+								"com"
+							],
+							"path": [
+								"Account",
+								"v1",
+								"User"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "Change book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": \"{{Us1id}}\",\r\n  \"isbn\": \"9781449337711\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bookURL}}/BookStoreV1BooksByISBNPut",
+							"host": [
+								"{{bookURL}}"
+							],
+							"path": [
+								"BookStoreV1BooksByISBNPut"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"isbn\": \"9781449337711\",\r\n  \"userId\": \"{{Us2id}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{bookURL}}/BookStore/v1/Book",
+							"host": [
+								"{{bookURL}}"
+							],
+							"path": [
+								"BookStore",
+								"v1",
+								"Book"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
