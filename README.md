@@ -1,25 +1,55 @@
-# Collection-of-HTTP-requests-for-a-REST-API
-
-This repository contains a collection of HTTP requests that interact with a free REST API that supports GET, POST, PUT, and DELETE requests. The purpose of this collection is to demonstrate the usage of variables, environments, and assertions in Postman, a popular API testing tool.
-
 # Getting started
 
 To use this collection, you will need to have Postman installed on your computer. You can download Postman from their official website: https://www.postman.com/downloads/
 Once you have Postman installed, you can import the collection by clicking on the "Import" button in the top-left corner of the Postman app and selecting the REST_API_requests.postman_collection.json file from this repository.
 
-# Variables
+# BookStore API HTTP Request Collection
 
-This collection uses variables to store sensitive information such as authentication credentials. You can set the values of these variables in the "Variables" tab of the collection. 
+This collection contains a series of HTTP requests for a REST API called "BookStore API". The collection is organized into four folders, each corresponding to a specific HTTP method: GET, POST, PUT, and DELETE.
 
-# Environments
+## Folders
 
-This collection uses environments to run the same requests but authorized with different users. You can create a new environment by clicking on the "Manage environments" button in the top-right corner of the Postman app and selecting "Add" to create a new environment. You can then set the values of the variables in the new environment to run the requests with different credentials.
+### GET
 
-# Assertions
+The **GET** folder contains requests for retrieving information from the BookStore API. The requests in this folder include:
 
-This collection uses assertions to check the status code 200 and 4xx in two of the requests, and to parse a JSON response to check the value of a parameter, such as a comment text or a username. You can view the assertions in the "Tests" tab of each request.
+**GET Books API:** retrieves a list of all books in the BookStore
 
-# Resources
+### POST
+
+The **POST** folder contains requests for creating new resources in the BookStore API. The requests in this folder include:
+
+**Add Book:** adds a new book to the user’s collection of books
+
+**New User:** creates a new user account
+
+### PUT
+
+The **PUT** folder contains requests for updating existing resources in the BookStore API. The requests in this folder include:
+
+**Change Book:** updates information about a specific user’s collection of books
+
+### DELETE
+
+The **DELETE** folder contains requests for deleting resources from the BookStore API. The requests in this folder include:
+
+**Delete Book:** removes a specific book from the user’s collection of books
+
+## Environments
+
+The BookStore API collection uses the "BookStore" environment to run the same requests but authorized with two different users. You can create a new environment by clicking on the "Manage environments" button in the top-right corner of the Postman app and selecting "Add" to create a new environment. You can then set the values of the variables in the new environment to run the requests with different credentials.
+
+## Variables
+
+The collection includes the following variables:
+
+bookURL: the URL for accessing the BookStore API
+
+ID, login and password: ID, login and password credentials for two users
+
+## Endpoints
+
+Endpoints for each request can be found on the following URL:https://bookstore.toolsqa.com/
 
 If you would like to use a different REST API that supports the same HTTP requests, you can find a list of free REST APIs on the following websites:
 1.	https://reqres.in
