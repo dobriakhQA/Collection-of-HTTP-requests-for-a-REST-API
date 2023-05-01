@@ -15,11 +15,13 @@ The **GET** folder contains requests for retrieving information from the BookSto
 
 **GET Books API:** retrieves a list of all books in the BookStore
 
+**GET Books ISBN:** retrieves information about specific book in the BookStore by it ISBN  
+
 ### POST
 
 The **POST** folder contains requests for creating new resources in the BookStore API. The requests in this folder include:
 
-**Add Book:** adds a new book to the user’s collection of books
+**User's list add new book:** adds a new book to the user’s collection of books
 
 **New User:** creates a new user account
 
