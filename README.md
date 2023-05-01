@@ -15,7 +15,7 @@ The **GET** folder contains requests for retrieving information from the BookSto
 
 **GET Books API:** retrieves a list of all books in the BookStore
 
-**GET Books ISBN:** retrieves information about specific book in the BookStore by it ISBN  
+**GET Books ISBN:** retrieves information about specific book in the BookStore by it ISBN. The ISBN is verified by a configured check that returns a validated value. 
 
 ### POST
 
